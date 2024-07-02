@@ -1,10 +1,12 @@
 import React from "react";
+import QuestionItem from "./QuestionItem"
 
-function QuestionList() {
+function QuestionList({questions ,setReloadPage}) {
+  const element = questions.map(question => <QuestionItem setReloadPage={setReloadPage} key={question.id} question={question}/>)
   return (
     <section>
       <h1>Quiz Questions</h1>
-      <ul>{/* display QuestionItem components here after fetching */}</ul>
+      <ul>{element}</ul>
     </section>
   );
 }
