@@ -34,7 +34,6 @@ function QuestionForm({reloadPage}) {
     })
     .then(r => r.json())
     .then(data => reloadPage(true))
-
   }
 
   return (
